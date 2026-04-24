@@ -157,3 +157,41 @@ header {
   padding: 10px 20px;
   border-radius: 20px;
 }
+
+/* Container for the list of updates */
+.update-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Adds space between each update row */
+    margin-top: 10px;
+}
+
+/* Individual update row */
+.update-item {
+    display: flex;
+    align-items: center; /* Vertically centers the text */
+    background: #2a2a2a; /* Slightly lighter than card bg to stand out */
+    padding: 10px;
+    border-radius: 6px;
+    gap: 15px; /* Creates a clear gap between date and message */
+}
+
+/* Date Badge */
+.update-date {
+    background-color: var(--primary-red);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    min-width: 50px; /* Ensures all date badges are the same width */
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Message Text */
+.update-msg {
+    font-size: 0.9rem;
+    color: #eee;
+    line-height: 1.3;
+}
