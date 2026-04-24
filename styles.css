@@ -83,6 +83,18 @@ header {
   background: var(--primary-red);
   grid-column: span 2;
 }
+
+/* Secondary Button Styling (e.g., Pinlock) */
+.btn-link.secondary {
+  background-color: #444; /* Medium Grey */
+  grid-column: span 2; /* Makes it full width like the others */
+  border: 1px solid #555;
+  transition: background-color 0.2s ease;
+}
+
+.btn-link.secondary:active {
+  background-color: #555;
+}
 .btn-link.discord {
   background: var(--discord-blurple);
   grid-column: span 2;
