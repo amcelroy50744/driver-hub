@@ -6,6 +6,11 @@
   --text-grey: #bbbbbb;
   --discord-blurple: #5865f2;
 }
+.container {
+  padding: 15px;
+  max-width: 600px; /* This prevents the site from getting too wide on PC */
+  margin: 0 auto;  /* This centers the container on the screen */
+}
 
 body {
   font-family: -apple-system, sans-serif;
@@ -194,4 +199,25 @@ header {
     font-size: 0.9rem;
     color: #eee;
     line-height: 1.3;
+}
+
+/* Media Query: Rules for screens wider than 768px (Tablets/PCs) */
+@media (min-width: 768px) {
+    header {
+        padding: 40px 0 0 0; /* More space at the top on big screens */
+    }
+
+    .main-nav {
+        max-width: 600px;
+        margin: 15px auto 0 auto;
+        border-radius: 8px 8px 0 0; /* Rounds the top corners of the nav */
+    }
+
+    .card {
+        padding: 25px; /* More internal space for cards on desktop */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }
