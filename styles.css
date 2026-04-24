@@ -1,135 +1,126 @@
-/* General Layout */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #1a1a1a; /* Very dark grey */
-    color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+:root {
+    --primary-red: #d32f2f;
+    --dark-bg: #121212;
+    --card-bg: #1e1e1e;
+    --text-main: #f4f4f4;
+    --text-dim: #b0b0b0;
+    --success: #4caf50;
+    --warning: #ff9800;
 }
 
-/* Header/Top Bar */
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Header */
 header {
-    background-color: #d32f2f; /* Primary Red */
-    color: white;
-    padding: 20px;
+    background-color: var(--primary-red);
+    padding: 25px 15px;
     text-align: center;
-    border-bottom: 5px solid #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 header h1 { 
     margin: 0; 
-    font-size: 1.4rem; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
+    font-size: 1.5rem; 
+    letter-spacing: -0.5px;
 }
+
+.sub-brand { font-weight: 300; opacity: 0.8; }
 
 .date { 
-    font-size: 0.9rem; 
-    opacity: 0.9; 
-    margin-top: 5px; 
+    font-size: 0.85rem; 
+    margin-top: 4px;
+    font-weight: 500;
 }
 
-/* Main Container */
-main { 
-    padding: 15px; 
-}
-
-/* Card Styling */
+/* Cards */
 .card {
-    background-color: #333; /* Medium Grey */
-    border-radius: 8px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
     padding: 20px;
-    margin-bottom: 15px;
-    border-left: 5px solid #d32f2f; /* Red Accent Stripe */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-/* Inspection Form Button */
-.action-card {
-    text-align: center;
-    border-left: 5px solid #888; /* Grey Accent */
+h2 { 
+    font-size: 0.9rem; 
+    margin-bottom: 15px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Buttons */
+.button-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .btn-link {
     display: block;
-    background-color: #d32f2f;
-    color: white;
+    text-align: center;
     text-decoration: none;
-    padding: 18px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-top: 10px;
-    font-size: 1rem;
-    transition: background 0.2s;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
-.btn-link:active {
-    background-color: #b71c1c;
-    transform: scale(0.98);
-}
+.primary { background-color: var(--primary-red); color: white; }
+.secondary { background-color: #3d3d3d; color: white; }
+.discord { background-color: #5865F2; color: white; }
 
-/* KPI Metrics Grid */
+.btn-link:hover { opacity: 0.9; transform: translateY(-1px); }
+.btn-link:active { transform: translateY(0); }
+
+/* Metrics */
 .metrics {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 16px;
 }
 
-.metric-card {
-    text-align: center;
-    padding: 15px 10px;
+.metric-card { text-align: center; margin-bottom: 0; }
+.stat { font-size: 2rem; font-weight: 800; margin: 5px 0; }
+.goal { font-size: 0.75rem; color: var(--text-dim); }
+
+.status-good .stat { color: var(--success); }
+.status-warning .stat { color: var(--warning); }
+
+/* Safety & Alerts */
+.safety-text {
+    font-style: italic;
+    border-left: 3px solid var(--primary-red);
+    padding-left: 15px;
+    color: #ddd;
 }
 
-.metric-card h3 { 
-    font-size: 0.75rem; 
-    margin: 0; 
-    color: #bbb; 
-    text-transform: uppercase; 
+.update-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    display: flex;
+    gap: 15px;
+    align-items: baseline;
 }
 
-.stat { 
-    font-size: 1.8rem; 
-    font-weight: bold; 
-    margin: 8px 0; 
-    color: #fff; 
+.update-date {
+    font-weight: bold;
+    color: var(--primary-red);
+    min-width: 55px;
+    font-size: 0.85rem;
 }
 
-.goal { 
-    font-size: 0.7rem; 
-    color: #d32f2f; 
-    font-weight: bold; 
-    margin: 0; 
-}
-
-/* Section Headings */
-h2 { 
-    font-size: 1.1rem; 
-    margin-top: 0; 
-    color: #d32f2f; 
-    text-transform: uppercase; 
-}
-
-/* List Styling (Load Updates) */
-ul { 
-    padding-left: 20px; 
-    margin: 0; 
-}
-
-li { 
-    margin-bottom: 10px; 
-    font-size: 0.9rem; 
-    border-bottom: 1px solid #444; 
-    padding-bottom: 5px; 
-}
-
-li:last-child { 
-    border-bottom: none; 
-}
-
-/* Safety Message Formatting */
-.safety-text { 
-    font-style: italic; 
-    color: #eee; 
-}
+.update-msg { font-size: 0.9rem; }
