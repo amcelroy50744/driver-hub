@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Target Madison USXI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Target Madison</h1>
+      <div class="date" id="current-date"></div>
+    </header>
+
+    <main>
+      <section class="card action-card">
+        <h2>Required Forms</h2>
+        <a
+          href="https://app.smartsheet.com/b/form/f10eee7610c347f5bd076bdf74858b39"
+          class="btn-link"
+          target="_blank"
+        >
+          Start Pre/Post Trip Inspection
+        </a>
+      </section>
+
+      <section class="metrics">
+        <div class="card metric-card">
+          <h3>Current OTA</h3>
+          <div class="stat">100%</div>
+          <p class="goal">Goal: 99.5%</p>
+        </div>
+        <div class="card metric-card">
+          <h3>Avg ERS Score</h3>
+          <div class="stat">18</div>
+          <p class="goal">Goal: 15.0</p>
+        </div>
+      </section>
+
+      <section class="card safety-card">
+        <h2>Daily Safety Message</h2>
+        <p class="safety-text">
+          "The shoulder of the road should only be used in an emergency.
+          Activate your hazards and put out your triangles before making calls
+          for assistance."
+        </p>
+      </section>
+
+      <section class="card alert-card">
+        <h2>Load Updates & Cancels</h2>
+        <ul>
+          <li><strong>April 23:</strong></li>
+          <li><strong>April 24:</strong></li>
+        </ul>
+      </section>
+    </main>
+
+    <script>
+      // Automatically updates the date header
+      const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      };
+      document.getElementById("current-date").innerText =
+        new Date().toLocaleDateString(undefined, options);
+    </script>
+  </body>
+</html>

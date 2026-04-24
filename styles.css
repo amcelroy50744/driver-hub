@@ -1,0 +1,135 @@
+/* General Layout */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #1a1a1a; /* Very dark grey */
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header/Top Bar */
+header {
+    background-color: #d32f2f; /* Primary Red */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #333;
+}
+
+header h1 { 
+    margin: 0; 
+    font-size: 1.4rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+
+.date { 
+    font-size: 0.9rem; 
+    opacity: 0.9; 
+    margin-top: 5px; 
+}
+
+/* Main Container */
+main { 
+    padding: 15px; 
+}
+
+/* Card Styling */
+.card {
+    background-color: #333; /* Medium Grey */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 5px solid #d32f2f; /* Red Accent Stripe */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Inspection Form Button */
+.action-card {
+    text-align: center;
+    border-left: 5px solid #888; /* Grey Accent */
+}
+
+.btn-link {
+    display: block;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    padding: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-link:active {
+    background-color: #b71c1c;
+    transform: scale(0.98);
+}
+
+/* KPI Metrics Grid */
+.metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.metric-card {
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.metric-card h3 { 
+    font-size: 0.75rem; 
+    margin: 0; 
+    color: #bbb; 
+    text-transform: uppercase; 
+}
+
+.stat { 
+    font-size: 1.8rem; 
+    font-weight: bold; 
+    margin: 8px 0; 
+    color: #fff; 
+}
+
+.goal { 
+    font-size: 0.7rem; 
+    color: #d32f2f; 
+    font-weight: bold; 
+    margin: 0; 
+}
+
+/* Section Headings */
+h2 { 
+    font-size: 1.1rem; 
+    margin-top: 0; 
+    color: #d32f2f; 
+    text-transform: uppercase; 
+}
+
+/* List Styling (Load Updates) */
+ul { 
+    padding-left: 20px; 
+    margin: 0; 
+}
+
+li { 
+    margin-bottom: 10px; 
+    font-size: 0.9rem; 
+    border-bottom: 1px solid #444; 
+    padding-bottom: 5px; 
+}
+
+li:last-child { 
+    border-bottom: none; 
+}
+
+/* Safety Message Formatting */
+.safety-text { 
+    font-style: italic; 
+    color: #eee; 
+}
