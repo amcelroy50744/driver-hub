@@ -58,27 +58,38 @@
       <!-- Weather -->
       <section class="card">
         <h2>Madison Hub Forecast</h2>
-        <a class="weatherwidget-io" 
-           href="https://forecast7.com/en/34d70n86d75/madison/?unit=us" 
-           data-label_1="MADISON" 
-           data-label_2="WEATHER" 
-           data-font="Roboto" 
-           data-icons="Climacons Animated" 
-           data-mode="Forecast" 
-           data-days="3" 
-           data-theme="pure" 
-           data-basecolor="#1e1e1e" 
-           data-accent="#555555" 
-           data-textcolor="#ffffff" 
-           data-highcolor="#d32f2f" 
-           data-lowcolor="#bbbbbb" 
-           data-unit="us">
-           MADISON WEATHER (F°)
+        <a
+          class="weatherwidget-io"
+          href="https://forecast7.com/en/34d70n86d75/madison/?unit=us"
+          data-label_1="MADISON"
+          data-label_2="WEATHER"
+          data-font="Roboto"
+          data-icons="Climacons Animated"
+          data-mode="Forecast"
+          data-days="3"
+          data-theme="pure"
+          data-basecolor="#1e1e1e"
+          data-accent="#555555"
+          data-textcolor="#ffffff"
+          data-highcolor="#d32f2f"
+          data-lowcolor="#bbbbbb"
+          data-unit="us"
+        >
+          MADISON WEATHER (F°)
         </a>
         <script>
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+          !(function (d, s, id) {
+            var js,
+              fjs = d.getElementsByTagName(s)[0];
+            if (!d.getElementById(id)) {
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "https://weatherwidget.io/js/widget.min.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }
+          })(document, "script", "weatherwidget-io-js");
         </script>
-    </section>
+      </section>
       <!-- Metrics -->
       <section class="metrics">
         <div class="card metric-card status-good">
@@ -99,8 +110,8 @@
           <h2>Daily Safety Message</h2>
         </div>
         <p class="safety-text">
-          "If you have safety concerns, do not ignore them. Take the extra time
-          to fix them or reach out to your manager. Safety is our top priority."
+          "Increasing speed decreases time to make decisions. Slow down. Always
+          leave yourself an out. Stay safe out there!" - Safety Team
         </p>
       </section>
 
