@@ -1,0 +1,58 @@
+/* Step Card Styling */
+.step-card {
+  border-left: 4px solid #555; /* Neutral grey for steps */
+}
+
+.highlight-step {
+  border-left: 4px solid var(--primary-red); /* Highlights steps with external links */
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.step-num {
+  background: var(--primary-red);
+  color: white;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Checklist Styling */
+.check-list {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.check-list li {
+  margin-bottom: 8px;
+  color: var(--text-grey);
+}
+
+/* Alert/Warning Boxes */
+.alert-box {
+  background: rgba(211, 47, 47, 0.1);
+  border: 1px solid var(--primary-red);
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+.warning-box {
+  background: #ffeb3b;
+  color: #000;
+  padding: 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 10px;
+}
